@@ -1,0 +1,41 @@
+
+.workdiv {
+    margin-top: 10%;
+    position: relative;
+}
+
+.workdiv h1 {
+    color: #ec4b43 !important;
+}
+
+.workbackground {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 60%;
+}
+
+.worktext {
+    text-align: justify;
+    padding: 10px 15px;
+}
+
+.workimg {
+    width: 30%;
+    margin: 5px;
+    float: left; 
+    border: 2px solid;
+    border-color: #dc3545;
+}
+
+.worklink {
+    text-decoration: none;
+    color: #f8615a !important;
+  }
+  
+  .worklink:hover {
+    text-decoration: none;
+    color: #f1726b !important;
+  }

@@ -1,0 +1,324 @@
+
+/*TOP*/
+.container-work {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.presentacion-work {
+  margin: 2% auto 0 auto;
+  width: 70%;
+}
+
+.imgworkrad {
+  overflow: hidden;
+  border-radius: 100%;
+  border: 4px double #ffd868;
+  margin: 0 25%;
+}
+
+.imgwork {
+  width: 100%;
+}
+
+.presentacion-work h1 {
+  color: #f8615a;
+  font-family: 'Sacramento', cursive;
+  margin: -2rem auto 0 auto;
+  font-size: 6vw;
+  font-weight: bold;
+  width: 100%;
+}
+
+.presentacion-work h3 {
+  font-size: 2vw;
+}
+
+
+/*CENTER*/
+.center-container-work {
+  margin-top: 0;
+}
+
+.imgprofile-work {
+  opacity: 0.5;
+  width: 45%;
+}
+
+.center-container-work img {
+  padding-top: 0;
+  border-radius: 100%;
+}
+
+.center-container-work h1 {
+  color: #ffd868;
+  margin: 3% 0;
+  font-size: 3.5vw;
+}
+
+.center-container-work p {
+  padding: 0 15% 0 15%;
+}
+
+/* Works */
+.wknow {
+  margin: 5% 8%;
+}
+
+.wknow img {
+  width: 25%;
+}
+
+.wknow p {
+  margin: 1rem 1rem;
+}
+
+.wknow-rows {
+  width: 33%;
+}
+
+.imgcorte-work {
+  width: 15%;
+  margin: 5% 0 5% 0;
+  opacity: 0.5;
+}
+
+/*RECALL*/
+.workscall {
+  margin: 0 0 5% 0;
+  background-color: #f8615a;
+}
+
+.workstitle {
+  margin-bottom: 3rem;
+}
+
+.workscall h1 {
+  color: #dc3545;
+  margin: 3% 0;
+  font-size: 3.5vw;
+}
+
+.workscall p {
+  padding: 0 10%;
+  color: white;
+}
+
+.works img {
+  width: 80%;
+  margin-bottom: 1rem;
+  border: 2px solid;
+  border-color: #dc3545;
+}
+
+.works_textr h3 {
+  color: #dc3545 !important;
+}
+
+.works_textr a {
+  text-decoration: none;
+  /* color: #ffd868 !important; */
+}
+
+/* .works_textr a:hover {
+  text-decoration: none;
+  color: #FEE395 !important;
+} */
+
+.works-rows {
+  width: 33%;
+  margin-bottom: 5%;
+}
+
+/* BUTTON */
+
+.button-53 {
+  background-color: #ffd868;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000 !important;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem .5rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 30%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: auto;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover {
+  background-color: #FEE395 !important;
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem .5rem;
+    font-size: 1rem;
+  }
+}
+
+/* @media (min-width: 1px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 33%;
+  }
+} */
+
+/* OFCORSE */
+.ofcorse {
+  margin: 5% 0;
+}
+
+.ofcorse-p1 {
+  margin: 3% -25% 0 5%;
+  text-align: right;
+}
+
+.ofcorse-p2 {
+  margin: 25% 5% 0 -27%;
+  text-align: left;
+}
+
+.ofcorse-img {
+  width: 60%;
+  display: inline-block;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+
+
+  /* Presenteacion */
+  .imgworkrad {
+    width: 100%;
+    margin: 0;
+  }
+
+  .presentacion-work h1 {
+    font-size: 14vw;
+  }
+
+  .presentacion-work h3 {
+    font-size: 5vw;
+  }
+
+
+
+  /* Nube1 */
+  .imgprofile-work {
+    width: 50%;
+  }
+
+  /* CENTER */
+  .center-container-work {
+    margin: 10% 0 20%;
+  }
+
+  .center-container-work h1 {
+    font-size: 5vw;
+    margin-top: 10%;
+  }
+
+  /* Works */
+  .wknow{
+    display: inline-block;
+  }
+
+  .wknow-rows {
+    display: inline;
+  }
+
+  .wknow img {
+    width: 30%;
+  }
+
+  .wknow p {
+    margin-bottom: 10%;
+    text-align: left;
+  }
+
+  /* Nube2 */
+  .imgcorte-work {
+    width: 30%;
+  }
+
+  /* WORKS */
+  .workstitle h1 {
+    font-size: 5vw;
+  }
+
+  .workstitle {
+    margin: 0 0 -5% 0;
+  }
+
+  .works {
+    display: inline;
+  }
+
+  .works-rows {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .works img {
+    width: 50%;
+    margin-top: 10%;
+  }
+
+  .works p {
+    text-align: left;
+  }
+
+  /* OFCORSE */
+  .ofcorse-img {
+    width: 80%;
+  }
+
+  .ofcorse-p1 {
+    margin: 3% 0 0 5%;
+    text-align: left;
+  }
+
+  .ofcorse-p2 {
+    margin: 3% 1% 0 10%;
+    text-align: left;
+  }
+
+}
+  

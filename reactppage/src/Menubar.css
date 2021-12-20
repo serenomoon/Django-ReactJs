@@ -1,0 +1,88 @@
+
+.menu {
+    position: absolute !important;
+    top: 0 !important;
+    margin: 0 1rem 0 0 !important;
+    right: 1em !important;
+    z-index: 1;
+  }
+  
+.menu-alinear {
+  width: 100% !important;
+}
+
+.navbar-toggler {
+  margin-bottom: 0.5em !important;
+  border-color: #f8615a !important;
+  color: rgba(248, 97, 90 ,.20) !important;
+}
+
+.navbar-toggler-icon {
+  color:#f8615a !important;
+}
+
+.menu .onenav {
+  border-width: 0;
+  border-style: hidden;
+  margin: 0.2rem 0.2rem;
+  border: 2px solid #f8615a;
+  transition-duration: 0.4s;
+  outline: none;
+}
+
+.menu .onenav:hover {
+  border: 2px solid #f8615a;
+  background-color: #f8615a;
+  color: white;
+}
+
+.menu .links {
+  border: 0;
+  color: white !important;
+}
+
+.menu .links:hover {
+  border: 0;
+}
+
+/* White Background */
+.menu .onenavw {
+  border-width: 0;
+  border-style: hidden;
+  margin: 0.2rem 0.2rem;
+  border: 2px solid #f8615a;
+  background-color: #f8615a;
+  transition-duration: 0.4s;
+  color: white;
+  outline: none;
+}
+
+.menu .onenavw:hover {
+  border: 2px solid #f8615a;
+  background-color: white;
+  color: #f8615a;
+}
+
+.menu .linksw {
+  border: 0;
+  color: white !important;
+  
+}
+
+.menu .linksw:hover {
+  border: 0;
+  color: #f8615a !important;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    font-size: 3vw !important;
+  }
+
+  .navbar-toggler {
+    font-size: 6vw !important;
+  }
+}

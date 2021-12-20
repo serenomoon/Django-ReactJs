@@ -1,0 +1,75 @@
+/* FOOT */
+.foot {
+    background-color: #f8615a;
+  }
+  
+.foot-row {
+  margin: 0 auto;
+}
+
+.footbtn {
+  display: inline;
+  padding: 0 1rem;
+}
+
+.foot-col-linkedin {
+  margin: 1% 0;
+}
+
+.foot-col-github {
+  margin: 1% 0;
+}
+
+
+.flags{
+  margin: 2% 0;
+  width: 2.5%;
+}
+
+.flags:hover{
+  opacity: .7;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  border-color: #dc3545;
+}
+
+
+
+.foot-p {
+  color: white;
+  padding: 0 0;
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 768px) {
+    /* FOOT */
+
+  .foot {
+    padding: 5% 0;
+  }
+
+  .foot .fab{
+    font-size: 5vw;
+  }
+
+  .foot-col-linkedin {
+    margin: 1% 0;
+    text-align: right;
+  }
+
+  .foot-col-github {
+    margin: 1% 0;
+    text-align: left;
+  }
+
+  .flags{
+    width: 6%;
+  }
+
+  .foot-p {
+    color: white;
+    padding: 0 0;
+    font-size: 2vw;
+  }
+}

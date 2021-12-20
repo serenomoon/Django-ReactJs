@@ -1,0 +1,128 @@
+/*TOP*/
+.container-fluid-contact {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.presentacion-contact {
+  margin: 4% 0 0 0;
+  width: 120%;
+}
+
+.imgsueltas a {
+  color: #dc3545 !important;
+}
+
+.imgsueltas a:hover {
+  color: white !important;
+}
+
+.imgworkrad-contact {
+  overflow: hidden;
+  border-radius: 100%;
+  border: 4px double #ffd868;
+  margin: 0 0;
+}
+
+.imgwork-contact {
+  width: 100%;
+}
+
+
+
+.presentacion-contact h1 {
+  color: #f8615a;
+  font-family: 'Sacramento', cursive;
+  margin: 0 auto;
+  font-size: 6vw;
+  font-weight: bold;
+  width: 100%;
+}
+
+
+
+/* IMG SUELTAS */
+.imgsueltas {
+  width: 30% !important;
+}
+
+.imgsueltas-col {
+  margin: 10% 0 0 5% !important;
+}
+
+.imgsueltas-col a {
+  display: block !important;
+  margin-bottom: 30% !important;
+}
+
+.imgsueltas-col i {
+  font-size: 150% !important;
+}
+
+.btn-github {
+  margin-left: 15% !important;
+}
+
+.btn-instagram {
+  margin-left: 15% !important;
+}
+  
+  
+/* Responsive */
+@media only screen and (max-width: 768px) {
+
+  /* Presenteacion */
+  .presentacion-contact {
+    width: 100% !important;
+    margin-top: 2% !important;
+  }
+
+  .imgh1 {
+    margin: 0 auto !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .justify-content-center {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .imgworkrad-contact {
+    width: 70% !important;
+    margin: 0 auto !important;
+  }
+
+  .presentacion-contact h1 {
+    font-size: 14vw !important;
+    margin-top: -8% !important;
+  }
+
+  /* BOTONES */
+  .imgsueltas-col {
+    margin: 0 !important;
+  }
+
+  .imgsueltas {
+    display: inline !important;
+  }
+
+   .imgsueltas i {
+     font-size: 5vw !important;
+   }
+
+   .imgsueltas-col a {
+     display: inline-block !important;
+     margin-bottom: 0 !important;
+   }
+
+   .btn-github {
+     margin-left: 0 !important;
+   }
+
+   .btn-instagram {
+     margin-left: 0 !important;
+   }
+}
+  

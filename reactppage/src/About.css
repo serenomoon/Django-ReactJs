@@ -1,0 +1,329 @@
+
+/*TOP*/
+.container-fluid {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.presentacion {
+  position: absolute;
+  margin: 8% auto;
+  top: 0;
+  width: 100%;
+}
+
+
+.imgprofile {
+  width: 10%;
+}
+
+/* Fondo animado */
+.fondo {
+  margin-bottom: 60%;
+  overflow: hidden;
+}
+
+.fadein {
+    position:absolute;
+    top:0;
+    left:-50%;
+    width: 100%;
+}
+.fadein img {
+    position:absolute;
+    width: 100%;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* #f1 {
+
+} */
+#f2 {
+    -webkit-animation-delay: -10s;
+}
+#f3 {
+    -webkit-animation-delay: -5s;
+}
+#f4 {
+    -webkit-animation-delay: -7s;
+}
+
+/* --------- */
+
+.presentacion h1 {
+  color: #f8615a;
+  font-family: 'Sacramento', cursive;
+  margin: 3% auto 0 auto;
+  font-size: 6vw;
+  font-weight: bold;
+  width: 100%;
+}
+
+.presentacion h3 {
+  font-size: 2vw;
+}
+
+
+
+/*CENTER*/
+.center-container {
+  margin-top: 2em;
+}
+
+
+.center-container img {
+  padding-top: 50px;
+  border-radius: 100%;
+}
+
+.center-container h1 {
+  color: #ffd868;
+  margin: 3% 0;
+  font-size: 3.5vw;
+}
+
+.center-container p {
+  padding: 0 15% 0 15%;
+}
+
+/* separador */
+.separador {
+  margin: 8% 5%;
+  opacity: 0.5;
+  width: 25%;
+}
+
+/* HOBBIES */
+.hobbies {
+  margin: 0 8% 5% 8% !important;
+}
+
+.hobbies img {
+  height: 120px !important;
+}
+
+.hobbies p{
+  margin: 0 1rem !important;
+}
+
+.hobbies-rows {
+  margin-bottom: 2rem !important;
+}
+
+.imghobbiesw {
+  overflow: hidden !important;
+  border-radius: 100% !important;
+  height: 120px !important;
+  width: 120px !important;
+  border: 4px double #ffd868 !important;
+  margin: 0 auto !important;
+  margin: 0 auto 0.5rem auto !important;
+}
+
+.imghobbiesr {
+  overflow: hidden !important;
+  border-radius: 100% !important;
+  height: 120px !important;
+  width: 120px !important;
+  border: 4px double #ffd868 !important;
+  margin: 0 auto !important;
+  margin: 0 auto 0.5rem auto !important;
+}
+
+.imghobbiesp {
+  overflow: hidden !important;
+  border-radius: 100% !important;
+  height: 120px !important;
+  width: 120px !important;
+  border: 4px double #ffd868 !important;
+  margin: 0 auto 0.5rem auto !important;
+}
+
+.imghobbiesmus {
+  overflow: hidden !important;
+  border-radius: 100% !important;
+  height: 120px !important;
+  width: 120px !important;
+  border: 4px double #ffd868 !important;
+  margin: 0 auto !important;
+  margin: 0 auto 0.5rem auto !important;
+}
+
+.imghobbiesmus img {
+  width: 150px !important;
+  margin-right: 50px !important;
+}
+
+.bichito-img {
+  width: 7% !important;
+}
+
+/*RECALL*/
+.reacll, a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.recall {
+  margin: 0 0 5% 0 !important;
+  background-color: #f8615a;
+}
+
+.recall-row {
+  margin: 0 15% !important;
+}
+
+
+.recall .btn {
+  margin: 20% 5% !important;
+  font-size: 1.5vw !important;
+}
+
+.recall p {
+  margin: 12% 0;
+  font-size: 2vw;
+  color: white;
+}
+
+/* CURRICULUM */
+.cv {
+  margin: 5% 0;
+}
+
+.cv a {
+  color: #dc3545 !important;
+}
+
+.cv a:hover {
+  color: white !important;
+}
+
+.cv-col p {
+  margin: 5% 0 0 0;
+  padding-left: 5%;
+  text-align: left;
+}
+
+.cv-img {
+  margin: 0 50% 2% 50%;
+  width: 15%;
+  display: inline-block;
+}
+
+.cv-bt {
+  width: 25%;
+  margin: auto 46%;
+  display: inline-block;
+  font-size: 1.5vw;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .fondo {
+    margin-bottom: 60%;
+    overflow: hidden;
+  }
+
+  .fadein {
+      position:absolute;
+      top:0;
+      left:-150%;
+      width: 100%;
+      padding-left: 0;
+  }
+
+  .fadein img {
+    width: 200%;
+  }
+
+  .presentacion h1 {
+    font-size: 14vw;
+  }
+
+  .presentacion h3 {
+    font-size: 5vw;
+  }
+
+  .imgprofile {
+    width: 25%;
+    margin-top: 10%;
+  }
+
+  .separador {
+    width: 50% !important;
+  }
+
+  /* CENTRO */
+  .center-container {
+    margin-top: 20rem;
+  }
+  .center-container h1 {
+    font-size: 5vw;
+  }
+
+  /* HOBBIES */
+  .bichito-img {
+    width: 20% !important;
+  }
+
+  /* RECALL */
+
+  .recall-row {
+    margin: 0 5% !important;
+  }
+
+
+  .recall .btn {
+    margin: 5% 5% 20% 5% !important;
+    font-size: 4vw !important;
+  }
+
+  .recall p {
+    margin: 12% 0 5% 0;
+    font-size: 5vw;
+    color: white;
+  }
+
+  /* CV */
+  .cv-col p {
+    margin: 5% 0 0 0;
+    padding-left: 15%;
+    text-align: left;
+  }
+
+  .cv-img {
+    margin: 0 55% 2% 45%;
+    width: 30%;
+    display: inline-block;
+  }
+
+  .cv-bt {
+    width: 40% !important;
+    margin: auto 40% !important;
+    display: inline-block !important;
+    font-size: 3vw !important;
+  }
+
+}
