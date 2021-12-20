@@ -1,0 +1,20 @@
+[
+    {
+        "model": "newpage.workslist",
+        "pk": 1,
+        "fields": {
+            "title": "Testingiando",
+            "text": "Probando lo que habia que probar",
+            "linktogit": "www.google.com"
+        }
+    },
+    {
+        "model": "newpage.workslist",
+        "pk": 2,
+        "fields": {
+            "title": "New Testing",
+            "text": "Ya valio la madre",
+            "linktogit": "www.youtube.com"
+        }
+    }
+]
