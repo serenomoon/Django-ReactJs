@@ -63,7 +63,7 @@
 
 /* Works */
 .wknow {
-  margin: 5% 8%;
+  margin: 5% 8% !important;
 }
 
 .wknow img {
@@ -116,15 +116,11 @@
   color: #dc3545 !important;
 }
 
-.works_textr a {
-  text-decoration: none;
-  /* color: #ffd868 !important; */
+.works_textr p {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
-
-/* .works_textr a:hover {
-  text-decoration: none;
-  color: #FEE395 !important;
-} */
 
 .works-rows {
   width: 33%;

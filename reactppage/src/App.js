@@ -42,6 +42,11 @@ function App() {
   const [worktext, setWorkText] = useWorkTextState('');
   const [workgit, setWorkGit] = useWorkGitState('');
 
+  const useWorkTitleEngState = createPersistedState('worktitleeng');
+  const useWorkTextEngState = createPersistedState('worktexteng');
+  const [worktitleeng, setWorkTitleEng] = useWorkTitleEngState('');
+  const [worktexteng, setWorkTextEng] = useWorkTextEngState('');
+
 
   const onclickmenu = (e) => {
     const id = e.currentTarget.id
@@ -58,11 +63,15 @@ function App() {
 
     projectInfo.map(project => {if(id === project.attributes.titleeng){
                                 setWorkImg(project.attributes.img)
-                                setWorkTitle(project.attributes.titleeng)
-                                setWorkText(project.attributes.texteng)
+                                setWorkTitleEng(project.attributes.titleeng)
+                                setWorkTextEng(project.attributes.texteng)
+                                setWorkTitle(project.attributes.titleesp)
+                                setWorkText(project.attributes.textesp)
                                 setWorkGit(project.attributes.linktogit)}
                                 else if(id === project.attributes.titleesp){
                                 setWorkImg(project.attributes.img)
+                                setWorkTitleEng(project.attributes.titleeng)
+                                setWorkTextEng(project.attributes.texteng)
                                 setWorkTitle(project.attributes.titleesp)
                                 setWorkText(project.attributes.textesp)
                                 setWorkGit(project.attributes.linktogit)}
@@ -150,7 +159,12 @@ function App() {
             />}/>
 
             <Route exact path={pagelink} element={<WorkView
+              languaje = {languaje}
+              spanishlang = {data.spanish}
+              englishlang = {data.english}
               img = {workimg}
+              titleeng = {worktitleeng}
+              texteng = {worktexteng}
               title = {worktitle}
               text = {worktext}
               gitlink = {workgit}

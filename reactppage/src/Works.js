@@ -42,23 +42,23 @@ const Works = (props) => {
        {/* What Know */}
         <div class="row wknow">
 
-          <div class="wknow-rows col-lg-3 col-md-12 col-sm-12">
+          <div class="wknow-rows col">
             <img src="/static/img/html.png" alt="movies"></img>
             <div class="imgwknow_textl">
               <p>{props.center1}</p>
             </div>
           </div>
 
-          <div class="wknow-rows col-lg-4 col-md-12 col-sm-12">
-            <img src="/static/img/python.png" alt="movies"></img>
+          <div class="wknow-rows col">
+            <img src="/static/img/djangologo.png" alt="movies"></img>
             <div class="imgwknow_textr">
               <p>{props.center2}
               </p>
             </div>
           </div>
 
-          <div class="wknow-rows col-lg-4 col-md-12 col-sm-12">
-            <img src="/static/img/photoshop.png" alt="movies"></img>
+          <div class="wknow-rows col">
+            <img src="/static/img/reactlogo.png" alt="movies"></img>
             <div class="imgwknow_textl">
               <p>{props.center3}</p>
             </div>

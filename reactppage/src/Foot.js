@@ -4,7 +4,7 @@ const Foot = (props) => {
     return(
         <>
          {/* <!-- FOOT --> */}
-          <div class="foot container-fluid">
+          <div class="foot container-fluid fixed-bottom">
             <div class="foot-row">
               <div class="footbtn foot-col-linkedin col-3">
                 <a class="btn btn-outline-danger" href="https://www.linkedin.com/in/saulo-fernandez-146a98197/" role="button"><i class="fab fa-linkedin"></i></a>
@@ -18,10 +18,8 @@ const Foot = (props) => {
               <div class="footbtn foot-col-flags col-3">
                 <a id="spanish" onClick={props.onclick} role="button"><img class="flags" src="/static/img/espana.png" alt="español"></img></a>
               </div>
-              <div class="foot-col col-12">
-                <p class="foot-p">Saulo Fernandez ©</p>
-              </div>
             </div>
+            <p class="foot-p">Saulo Fernandez ©</p>
           </div>
         </>
     )

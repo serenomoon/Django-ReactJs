@@ -1,6 +1,7 @@
 /* FOOT */
 .foot {
     background-color: #f8615a;
+    position: relative;
   }
   
 .foot-row {
@@ -13,16 +14,16 @@
 }
 
 .foot-col-linkedin {
-  margin: 1% 0;
+  margin: 10px 0;
 }
 
 .foot-col-github {
-  margin: 1% 0;
+  margin: 10px 0;
 }
 
 
 .flags{
-  margin: 2% 0;
+  margin: 10px 0;
   width: 2.5%;
 }
 
@@ -37,6 +38,9 @@
 
 
 .foot-p {
+  position: absolute;
+  right: 50px;
+  top: 15px;
   color: white;
   padding: 0 0;
   font-size: 1vw;
