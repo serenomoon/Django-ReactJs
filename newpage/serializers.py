@@ -4,4 +4,4 @@ from newpage.models import Workslist
 class WorksListSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Workslist
-        fields = ( 'titleeng', 'titleesp', 'img', 'texteng', 'textesp', 'linktogit')
+        fields = ( 'titleeng', 'titleesp', 'img', 'uploadimg', 'texteng', 'textesp', 'linktogit')

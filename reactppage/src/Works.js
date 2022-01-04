@@ -84,9 +84,12 @@ const Works = (props) => {
                       if( props.languaje == props.spanishlang ){
                         let titleslug = project.attributes.titleesp;
                         titleslug = titleslug.replace(/\s+/g, '-').toLowerCase();
+                        let str = project.attributes.uploadimg
+                        let splitted = str.split('newpage');
+                        let imgsplit = splitted[1];
                         return (
                             <div class="works-rows col-lg-4 col-md-12 col-sm-12">
-                              <img src={project.attributes.img} alt="work"></img>
+                              <img src={imgsplit} alt="work"></img>
                                 <div class="works_textr">
                                   <h3>{project.attributes.titleesp}</h3>
                                   <p>{project.attributes.textesp}</p>
@@ -97,9 +100,12 @@ const Works = (props) => {
                           )} else {
                             let titleslug = project.attributes.titleeng;
                             titleslug = titleslug.replace(/\s+/g, '-').toLowerCase();
+                            let str = project.attributes.uploadimg
+                            let splitted = str.split('newpage');
+                            let imgsplit = splitted[1];
                             return (
                               <div class="works-rows col-lg-4 col-md-12 col-sm-12">
-                                <img src={project.attributes.img} alt="work"></img>
+                                <img src={imgsplit} alt="work"></img>
                                   <div class="works_textr">
                                     <h3>{project.attributes.titleeng}</h3>
                                     <p>{project.attributes.texteng}</p>
