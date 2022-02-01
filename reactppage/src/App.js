@@ -62,9 +62,14 @@ function App() {
     let id = e.currentTarget.id
     
     projectInfo.map(project => {if(id === project.attributes.titleeng){
+                                let imgsplit = null
                                 let str = project.attributes.uploadimg
-                                let splitted = str.split('newpage');
-                                let imgsplit = splitted[1];
+                                  if (str == null){
+                                    imgsplit = project.attributes.img
+                                  } else {
+                                    let splitted = str.split('newpage');
+                                    imgsplit = splitted[1];
+                                  }
                                 setWorkImg(imgsplit)
                                 setWorkTitleEng(project.attributes.titleeng)
                                 setWorkTextEng(project.attributes.texteng)
@@ -72,9 +77,14 @@ function App() {
                                 setWorkText(project.attributes.textesp)
                                 setWorkGit(project.attributes.linktogit)}
                                 else if(id === project.attributes.titleesp){
+                                let imgsplit = null
                                 let str = project.attributes.uploadimg
-                                let splitted = str.split('newpage');
-                                let imgsplit = splitted[1];
+                                  if (str == null){
+                                    imgsplit = project.attributes.img
+                                  } else {
+                                    let splitted = str.split('newpage');
+                                    imgsplit = splitted[1];
+                                  }
                                 setWorkImg(imgsplit)
                                 setWorkTitleEng(project.attributes.titleeng)
                                 setWorkTextEng(project.attributes.texteng)
