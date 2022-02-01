@@ -84,9 +84,16 @@ const Works = (props) => {
                       if( props.languaje == props.spanishlang ){
                         let titleslug = project.attributes.titleesp;
                         titleslug = titleslug.replace(/\s+/g, '-').toLowerCase();
+                        
+                        let imgsplit = null
                         let str = project.attributes.uploadimg
-                        let splitted = str.split('newpage');
-                        let imgsplit = splitted[1];
+                        if (str == null){
+                          imgsplit = project.attributes.img 
+                        }else{
+                          let splitted = str.split('newpage');
+                          imgsplit = splitted[1];
+                        }
+                        
                         return (
                             <div class="works-rows col-lg-4 col-md-12 col-sm-12">
                               <img src={imgsplit} alt="work"></img>
@@ -94,15 +101,21 @@ const Works = (props) => {
                                   <h3>{project.attributes.titleesp}</h3>
                                   <p>{project.attributes.textesp}</p>
                                   <Link onClick={props.onclickbutton} id={project.attributes.titleesp} className="button-53" to={"/"+titleslug}>Ver Mas</Link>
-                                  {/* <a href={project.attributes.linktogit}>A GitHub!</a> */}
                                 </div>
                             </div>
                           )} else {
                             let titleslug = project.attributes.titleeng;
                             titleslug = titleslug.replace(/\s+/g, '-').toLowerCase();
+                            
+                            let imgsplit = null
                             let str = project.attributes.uploadimg
-                            let splitted = str.split('newpage');
-                            let imgsplit = splitted[1];
+                            if (str == null){
+                              imgsplit = project.attributes.img 
+                            }else{
+                              let splitted = str.split('newpage');
+                              imgsplit = splitted[1];
+                            }
+
                             return (
                               <div class="works-rows col-lg-4 col-md-12 col-sm-12">
                                 <img src={imgsplit} alt="work"></img>
@@ -110,7 +123,6 @@ const Works = (props) => {
                                     <h3>{project.attributes.titleeng}</h3>
                                     <p>{project.attributes.texteng}</p>
                                     <Link onClick={props.onclickbutton} id={project.attributes.titleeng} className="button-53" to={"/"+titleslug}>See More</Link>
-                                    {/* <a href={project.attributes.linktogit}>To GitHub!</a> */}
                                   </div>
                               </div>
                             )
