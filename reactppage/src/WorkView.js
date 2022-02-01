@@ -9,7 +9,7 @@ const WorkView = (props) => {
             <div>
                 <img className='workimg' src={props.img}></img>
                 <p className='worktext'>{props.text}</p>
-                <a className='worklink' href='{props.gitlink}'>A Github!</a>
+                <a className='worklink' href={props.gitlink}>A Github!</a>
             </div>
         </div>
         <img className='workbackground' src='/static/img/workviewback.png'></img>
@@ -23,7 +23,7 @@ const WorkView = (props) => {
             <div>
                 <img className='workimg' src={props.img}></img>
                 <p className='worktext'>{props.texteng}</p>
-                <a className='worklink' href='{props.gitlink}'>To Github!</a>
+                <a className='worklink' href={props.gitlink}>To Github!</a>
             </div>
         </div>
         <img className='workbackground' src='/static/img/workviewback.png'></img>
