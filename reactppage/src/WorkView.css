@@ -19,6 +19,8 @@
 .worktext {
     text-align: justify;
     padding: 10px 15px;
+    white-space: pre-line;  
+    vertical-align: bottom;
 }
 
 .workimg {
