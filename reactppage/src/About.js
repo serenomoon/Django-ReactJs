@@ -102,7 +102,7 @@ const About = (props) => {
               </div>
               <div class="cv-col col-6">
                 <img class="cv-img" src="/static/img/bichito1.png" alt="profile"></img>
-                <a href="/static/img/Saulo FI CV English.pdf" class="cv-bt btn btn-outline-danger">{props.cvb}</a>
+                <a href={`/static/img/${props.cvpdf}`} class="cv-bt btn btn-outline-danger">{props.cvb}</a>
               </div>
             </div>
         </div>

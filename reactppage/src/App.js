@@ -143,6 +143,7 @@ function App() {
 
               cv = {languaje.about.cv[0]}
               cvb = {languaje.about.cv[1]}
+              cvpdf = {languaje.about.cvpdf[0]}
             />}/>
               
             <Route exact path="/works" element={<Works 
