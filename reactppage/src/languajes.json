@@ -11,7 +11,7 @@
                         "Programming!, the magic that happens behind my cell phone, the holy grail of technology, the ... yeah, yeah, yeah, we all get it right now, so cut with that. I like programming."],
             "recall":["Look at some of my work, you can also send me a message or something...like money.","Works","Contact"],
             "cv":["I think we've already talked too much about me. Now let's talk about you, surely you are a very interesting person ... by the way, you can look at my cv if you want ... right now.","Look my CV"],
-            "cvpdf":["Saulo Fernandez Cv - English.pdf"]
+            "cvpdf":"Saulo Fernandez Cv - English.pdf"
         },
         "works":{
             "title":["My Works!","Experiences with code"],
@@ -37,7 +37,7 @@
                         "Programación!, la magia que ocurre detrás de mi teléfono celular, el santo grial de la tecnología, el... sí, sí, sí, ya se entendió. Me gusta la programación."],
             "recall":["Mirá algo de mi trabajo, también podés enviarme un mensaje, o algo... como dinero.","Trabajos","Contacto"],
             "cv":["Creo que ya hablamos demasiado de mí. Ahora hablemos de vos, seguramente sos una persona muy interesante... por cierto, podés ver mi currículum si querés... ahora mismo.","Mira mi CV"],
-            "cvpdf":["Saulo Fernandez Cv - Espanol.pdf"]
+            "cvpdf":"Saulo Fernandez Cv - Espanol.pdf"
         },
         "works":{
             "title":["Mis Trabajos!","Experiencias con codigo"],
