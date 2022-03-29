@@ -1,51 +1,41 @@
-import React, {useState,useEffect} from 'react'
+import React from 'react';
 import './App.css';
 import createPersistedState from 'use-persisted-state';
-import Menubar from './Menubar';
-import About from './About';
-import Works from './Works';
-import Contact from './Contact'
-import Foot from './Foot';
-import Head from './Head'
+import Menubar from './components/Menubar';
+import About from './components/About';
+import Works from './components/Works';
+import Contact from './components/Contact';
+import Foot from './components/Foot';
+import Head from './components/Head'
+import WorkView from './components/WorkView';
+
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
-import api from './apis/projects.js';
+import { useGetInfo } from './hooks/useGetInfo';
+import {english, spanish} from './languajes.json';
 
-import data from './languajes.json'
-import WorkView from './WorkView';
+const App = () => {
 
-function App() {
+  const {data} = useGetInfo() //Get data from api
 
-  const [projectInfo,setProjectInfo] = useState([]);
-
-    const fetchProjects  = async () =>{
-        const response = await api.get('')
-        setProjectInfo(response.data.data)
-    }
-
-    useEffect(()=>{
-        fetchProjects()
-    },[])
-  
-  const useColorMenuState = createPersistedState('colormenu');
+  const useColorMenuState = createPersistedState('colormenu'); //change navs colors
   const [colormenu, setColorMenu] = useColorMenuState(["onenav","links"]);
 
   const usePageLinkState = createPersistedState('pagelink');
   const [pagelink, setPagelink] = usePageLinkState("/");
 
-  const useWorkImgState = createPersistedState('workimg');
-  const useWorkTitleState = createPersistedState('worktitle');
-  const useWorkTextState = createPersistedState('worktext');
-  const useWorkGitState = createPersistedState('workgit');
-  const [workimg, setWorkImg] = useWorkImgState('');
-  const [worktitle, setWorkTitle] = useWorkTitleState('');
-  const [worktext, setWorkText] = useWorkTextState('');
-  const [workgit, setWorkGit] = useWorkGitState('');
+  const useWorkState = createPersistedState(workdata);
+  const [workdata, setWorkData] = useWorkState({
+      workimg: '',
+      worktitle: '',
+      worktitleeng: '',
+      worktext: '',
+      worktexteng: '',
+      workgit: ''
+});
 
-  const useWorkTitleEngState = createPersistedState('worktitleeng');
-  const useWorkTextEngState = createPersistedState('worktexteng');
-  const [worktitleeng, setWorkTitleEng] = useWorkTitleEngState('');
-  const [worktexteng, setWorkTextEng] = useWorkTextEngState('');
+  const useLanguajeState = createPersistedState('languaje');
+  const [languaje, setLanguaje] = useLanguajeState(english);
 
 
   const onclickmenu = (e) => {
@@ -58,54 +48,41 @@ function App() {
     }
   }
 
+  
   const onclickbutton = (e) => {
     let id = e.currentTarget.id
-    
-    projectInfo.map(project => {if(id === project.attributes.titleeng){
-                                let imgsplit = null
-                                let str = project.attributes.uploadimg
-                                  if (str == null){
-                                    imgsplit = project.attributes.img
-                                  } else {
-                                    let splitted = str.split('newpage');
-                                    imgsplit = splitted[1];
-                                  }
-                                setWorkImg(imgsplit)
-                                setWorkTitleEng(project.attributes.titleeng)
-                                setWorkTextEng(project.attributes.texteng)
-                                setWorkTitle(project.attributes.titleesp)
-                                setWorkText(project.attributes.textesp)
-                                setWorkGit(project.attributes.linktogit)}
-                                else if(id === project.attributes.titleesp){
-                                let imgsplit = null
-                                let str = project.attributes.uploadimg
-                                  if (str == null){
-                                    imgsplit = project.attributes.img
-                                  } else {
-                                    let splitted = str.split('newpage');
-                                    imgsplit = splitted[1];
-                                  }
-                                setWorkImg(imgsplit)
-                                setWorkTitleEng(project.attributes.titleeng)
-                                setWorkTextEng(project.attributes.texteng)
-                                setWorkTitle(project.attributes.titleesp)
-                                setWorkText(project.attributes.textesp)
-                                setWorkGit(project.attributes.linktogit)}
-                                })
 
+    data.map(dat => {
+                      let imgsplit = null
+                      let str = dat.uploadimg
+                        if (str == null){
+                          imgsplit = dat.img
+                        } else {
+                          let splitted = str.split('newpage');
+                          imgsplit = splitted[1];
+                        }
+                      setWorkData({
+                        workimg: imgsplit,
+                        worktitle: dat.titleesp,
+                        worktitleeng: dat.titleeng,
+                        worktext: dat.textesp,
+                        worktexteng: dat.texteng,
+                        workgit: dat.linktogit
+                        })
+                    });
+                                
     id = id.replace(/\s+/g, '-').toLowerCase()
     setPagelink("/"+id)
   }
 
-  const useLanguajeState = createPersistedState('languaje');
-  const [languaje, setLanguaje] = useLanguajeState(data.english);
+  
 
   const onclick = (e) => {
     const id = e.currentTarget.id
     if (id == "spanish"){
-      setLanguaje(data.spanish)
+      setLanguaje(spanish)
     } else {
-      setLanguaje(data.english)
+      setLanguaje(english)
     }
   }
 
@@ -163,12 +140,9 @@ function App() {
               ofcorse2 = {languaje.works.final[1]}
               
               languaje = {languaje}
-              spanishlang = {data.spanish}
-              
-              projectinfo = {projectInfo}
+              spanishlang = {spanish}
 
               onclickbutton = {onclickbutton}
-
             />}/>
 
             <Route exact path="/contact" element={<Contact 
@@ -177,17 +151,16 @@ function App() {
 
             <Route exact path={pagelink} element={<WorkView
               languaje = {languaje}
-              spanishlang = {data.spanish}
-              englishlang = {data.english}
-              img = {workimg}
-              titleeng = {worktitleeng}
-              texteng = {worktexteng}
-              title = {worktitle}
-              text = {worktext}
-              gitlink = {workgit}
+              spanishlang = {spanish}
+              englishlang = {english}
+              img = {workdata.workimg}
+              titleeng = {workdata.worktitleeng}
+              texteng = {workdata.worktexteng}
+              title = {workdata.worktitle}
+              text = {workdata.worktext}
+              gitlink = {workdata.workgit}
             />}/>
                 
-
           </Routes>
       </Router>
 

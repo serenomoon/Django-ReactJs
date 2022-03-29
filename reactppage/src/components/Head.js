@@ -1,6 +1,6 @@
 import {Helmet} from "react-helmet";
 
-const Head = (props) => {
+const Head = ({title}) => {
     return(
         <Helmet>
             <link rel="preconnect" href="https://fonts.gstatic.com"></link>
@@ -16,7 +16,7 @@ const Head = (props) => {
             {/* Font Awesome */}
             <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous"></link>
             <script src="https://use.fontawesome.com/f8fac27731.js"></script>
-            <title>{props.title}</title>
+            <title>{title}</title>
         </Helmet>
     )
 }

@@ -1,6 +1,6 @@
 import './Contact.css'
 
-const Contact = (props) => {
+const Contact = ({contact}) => {
     return(
         <>
         {/* TOP */}
@@ -12,7 +12,7 @@ const Contact = (props) => {
                 <div class="imgworkrad-contact">
                   <img class="imgwork-contact" src="/static/img/contactback.jpg" alt="profile"></img>
                 </div>
-                <h1 class="title">{props.contact}</h1>
+                <h1 class="title">{contact}</h1>
               </div>
             </div>
             <div class="imgsueltas-col col-lg-4 col-md-4 col-sm-6">

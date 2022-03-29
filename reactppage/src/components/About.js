@@ -2,7 +2,7 @@ import './About.css';
 import {Container, Row, Col} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
-const About = (props) => {
+const About = ({title, subtitle, subtitlecenter, center, hobbies1, hobbies2, hobbies3, hobbies4, recall, onclickmenu, worksb, contactb, cv, cvpdf, cvb}) => {
     return(
         <>
         {/* <!--TOP--> */}
@@ -20,8 +20,8 @@ const About = (props) => {
 
             <div class="presentacion">
               <img class="imgprofile" src="/static/img/favicon.png" alt="profile"></img>
-              <h1 class="title">{props.title}</h1>
-              <h3>{props.subtitle}</h3>
+              <h1 class="title">{title}</h1>
+              <h3>{subtitle}</h3>
             </div>
 
         </Container>
@@ -31,8 +31,8 @@ const About = (props) => {
         {/* <!--CENTER--> */}
         <div class="center-container">
             <img class="imgprofile" src="/static/img/elbaron.jpg" alt="profile"></img>
-            <h1>{props.subtitlecenter}</h1>
-            <p>{props.center}</p>
+            <h1>{subtitlecenter}</h1>
+            <p>{center}</p>
         </div>
 
         <img class="separador" src="/static/img/corner.png" alt="separador"></img>
@@ -45,7 +45,7 @@ const About = (props) => {
                 <img src="/static/img/watching.gif" alt="movies"></img>
               </div>
               <div class="imghobbies_textl">
-                <p>{props.hobbies1}</p>
+                <p>{hobbies1}</p>
               </div>
             </div>
         
@@ -54,7 +54,7 @@ const About = (props) => {
                 <img src="/static/img/music.gif" alt="movies"></img>
               </div>
               <div class="imghobbies_textr">
-                <p>{props.hobbies2}</p>
+                <p>{hobbies2}</p>
               </div>
             </div>
         
@@ -63,7 +63,7 @@ const About = (props) => {
                 <img src="/static/img/read.gif" alt="movies"></img>
               </div>
               <div class="imghobbies_textl">
-                <p>{props.hobbies3}</p>
+                <p>{hobbies3}</p>
               </div>
             </div>
         
@@ -72,7 +72,7 @@ const About = (props) => {
                 <img src="/static/img/programing.gif" alt="movies"></img>
               </div>
               <div class="imghobbies_textr">
-                <p>{props.hobbies3}</p>
+                <p>{hobbies4}</p>
               </div>
             </div>
 
@@ -84,11 +84,11 @@ const About = (props) => {
         <Container fluid className="recall">
             <Row className="recall-row">
               <Col lg="6" sm="12" className="recall-col">
-                <p>{props.recall}</p>
+                <p>{recall}</p>
               </Col>
               <Col lg="6" sm="12" className="recall-col">
-                <a class="btn btn-outline-danger" id="works" onClick={props.onclickmenu}><Link to="/works">{props.worksb}</Link></a>
-                <a class="btn btn-outline-danger" id="contact" onClick={props.onclickmenu}><Link to="/contact">{props.contactb}</Link></a>
+                <a class="btn btn-outline-danger" id="works" onClick={onclickmenu}><Link to="/works">{worksb}</Link></a>
+                <a class="btn btn-outline-danger" id="contact" onClick={onclickmenu}><Link to="/contact">{contactb}</Link></a>
               </Col>
             </Row>
         </Container>
@@ -98,11 +98,11 @@ const About = (props) => {
         <div class="cv container-fluid">
             <div class="cv-row row">
               <div class="cv-col col-6">
-                <p>{props.cv}</p>
+                <p>{cv}</p>
               </div>
               <div class="cv-col col-6">
                 <img class="cv-img" src="/static/img/bichito1.png" alt="profile"></img>
-                <a href={`/static/img/${props.cvpdf}`} class="cv-bt btn btn-outline-danger">{props.cvb}</a>
+                <a href={`/static/img/${cvpdf}`} class="cv-bt btn btn-outline-danger">{cvb}</a>
               </div>
             </div>
         </div>

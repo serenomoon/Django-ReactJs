@@ -1,6 +1,6 @@
 import './Foot.css'
 
-const Foot = (props) => {
+const Foot = ({onclick}) => {
     return(
         <>
          {/* <!-- FOOT --> */}
@@ -13,10 +13,10 @@ const Foot = (props) => {
                 <a class="btn btn-outline-danger" href="https://github.com/serenomoon" role="button"><i class="fab fa-github-square"></i></a>
               </div>
               <div class="footbtn foot-col-flags col-3">
-                <a id="english" onClick={props.onclick} role="button"><img class="flags" src="/static/img/reino-unido.png" alt="ingles"></img></a>
+                <a id="english" onClick={onclick} role="button"><img class="flags" src="/static/img/reino-unido.png" alt="ingles"></img></a>
               </div>
               <div class="footbtn foot-col-flags col-3">
-                <a id="spanish" onClick={props.onclick} role="button"><img class="flags" src="/static/img/espana.png" alt="español"></img></a>
+                <a id="spanish" onClick={onclick} role="button"><img class="flags" src="/static/img/espana.png" alt="español"></img></a>
               </div>
             </div>
             <p class="foot-p">Saulo Fernandez ©</p>
